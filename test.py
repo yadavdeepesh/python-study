@@ -24,4 +24,11 @@ print(x)
 # this is a comment
 
 print("Hello, World!") # this is a comment
+print("Have a nice day!") # this is a comment
+print("Learning Python is fun!") # this is a comment
 
+# Semicolons (Optional, Rarely Used)
+
+# Semicolons are optional in Python. You can write multiple statements on one line by separating them with ; but this is rarely used because it makes it hard to read:
+
+print("Hello"); print("World") # this is a comment
