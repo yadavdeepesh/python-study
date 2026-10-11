@@ -658,20 +658,310 @@ str() - constructs a string from a wide variety of data types, including strings
 # print(txt)
 
 
-txt = "Hello, World!"
-print(txt[2:5])
+# txt = "Hello, World!"
+# print(txt[2:5])
 
-print(txt.upper())
+# print(txt.upper())
 
-name = "Deepesh"
-age = 28
-txt = f"My name is {name}, and I am {age} years old."
-print(txt)
+# name = "Deepesh"
+# age = 28
+# txt = f"My name is {name}, and I am {age} years old."
+# print(txt)
+
+# Boolean Values
+# In programming you often need to know if an expression is True or False.
+
+# You can evaluate any expression in Python, and get one of two answers, True or False.
+
+# print(10 > 9)
+# print(10 == 9)
+# print(10 < 9)
+
+
+# when you run a condition in an if statement , python returns True or False:
+
+# a = 200
+# b = 33
+# if b > a:
+#     print("b is greater than a")
+# else:
+#     print("b is not greater than a")
+
+
+# Evaluate Values and Variables
+# The bool() function allows you to evaluate any value, and give you True or False in return,
+
+# print(bool("hello"))
+# print(bool(15))
+
+# x = "Hello"
+# y = 15
+
+# print(bool(x))  
+# print(bool(y))  
+
+# Most Values are True
+# Almost any value is evaluated to True if it has some sort of content. 
+
+# Any string is True, except empty strings.
+
+# Any number is True, except 0.
+
+# Any list, tuple, set, and dictionary are True, except empty ones.
+
+# The following will return True:
+
+# print(bool("abc"))
+# print(bool(123))
+# print(bool(["apple", "cherry", "banana"]))
+
+# Some Values are False
+# In fact, there are not many values that evaluate to False, except empty values, such as (), [], {}, "", the number 0, and the value None. And of course the value False evaluates to False.
+
+# print(bool(False))
+# print(bool(None))
+# print(bool(0))
+# print(bool(""))
+# print(bool(()))
+# print(bool([]))     
+# print(bool({}))
+
+# One more value, or object in this case, evaluates to False, and that is if you have an object that is made from a class with a __len__ function that returns 0 or False:
+
+# class myclass():
+#     def __len__(self):
+#         return 0
+
+# myobj = myclass()
+# print(bool(myobj))
+
+
+# Functions can Return a Boolean
+# You can create functions that returns a Boolean Value:
+
+# def myFunction():
+#     return True
+
+# print(myFunction())
+
+# Example
+# Print "YES!" if the function returns True, otherwise print "NO!":
+
+# def myFunction():
+#     return True
+
+# if myFunction():
+#     print("YES!")
+# else:   
+#     print("NO!")
+
+# Python also has many built-in functions that return a boolean value, like the isinstance() function, which can be used to determine if an object is of a certain data type:
+
+# x = 200
+# print(isinstance(x, int))
+
+# print(10 > 9)
+# print(10 == 9)
+# print(bool("hello"))
+# print(bool(0))
+
+# Python Operators
+# Operators are used to perform operations on variables and values.
+
+# In the example below, we use the + operator to add together two values:
+
+# print(10 + 5)
+
+# sum1 = 100 + 50      # 150 (100 + 50)
+# sum2 = sum1 + 250    # 400 (150 + 250)
+# sum3 = sum2 + sum2   # 800 (400 + 400)
+
+# print(sum1)
+# print(sum2)
+# print(sum3)
+
+# x = 15
+# y = 4
+
+# print(x + y)
+# print(x - y)
+# print(x * y)
+# print(x / y)
+# print(x % y)
+# print(x ** y)
+# print(x // y)
+
+# print(x / y)
+
+# The Walrus Operator
+# Python 3.8 introduced the := operator, known as the "walrus operator". It assigns values to variables as part of a larger expression:
+
+# numbers = [1, 2, 3, 4, 5]
+
+# if (count := len(numbers)) > 3:
+#     print(f"List has {count} elements")
+
+# The Ternary Operator
+# The ternary operator allows you to assign one value if a condition is true, and another if it is false:
+
+# num = 6
+
+# x = "WEEKEND!" if num > 5 else "Workday"
+
+# print(x)
+
+# num = 6
+
+# x = "Fri" if num == 5 else "Sat" if num == 6 else "Sun" if num == 7 else "weekday"
+
+# print(x)
+
+# Examples
+# Comparison operators return True or False based on the comparison:
+
+# x = 5
+# y = 3
+
+# print(x == y)
+# print(x != y)
+# print(x > y)
+# print(x < y)
+# print(x >= y)
+# print(x <= y)
+
+# Chaining Comparison Operators
+# Python allows you to chain comparison operators:
+
+# x = 5
+
+# print(1 < x < 10)
+
+# print(1 < x and x < 10)
+
+# Logical Operators
+# Logical operators are used to combine conditional statements:
+
+# Operator	Description	Example	Try it
+# and 	Returns True if both statements are true	x < 5 and  x < 10	
+# or	Returns True if one of the statements is true	x < 5 or x < 4	
+# not	Reverse the result, returns False if the result is true	not(x < 5 and x < 10)
+
+# Test if a number is greater than 0 and less than 10:
+
+# x = 5
+
+# print(x > 0 and x < 10)
+
+
+# Test if a number is less than 5 or greater than 10:
+
+# x = 5
+
+# print(x < 5 or x > 10)
+
+# Reverse the result with not:
+
+# x = 5
+
+# print(not(x > 3 and x < 10))
+
+# Identity Operators
+# Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location:
+
+# Operator	Description	Example	Try it
+# is 	Returns True if both variables are the same object	x is y	
+# is not	Returns True if both variables are not the same object
+
+
+# ExampleGet your own Python Server
+# The is operator returns True if both variables point to the same object:
+
+# x = ["apple", "banana"]
+# y = ["apple", "banana"]
+# z = x
+
+# print(x is z)
+# print(x is y)
+# print(x == y)
+
+# Example
+# The is not operator returns True if both variables do not point to the same object:
+
+# x = ["apple", "banana"]
+# y = ["apple", "banana"]
+
+# print(x is not y)
+
+
+# x = [1, 2, 3]
+# y = [1, 2, 3]
+
+# print(x == y)
+# print(x is y)
+
+# Python Membership Operators
+# Share
 
 
 
+# Link Copied
+# Membership Operators
+# Membership operators are used to test if a sequence is presented in an object:
+
+# Operator	Description	Example	Try it
+# in 	Returns True if a sequence with the specified value is present in the object	x in y	
+# not in	Returns True if a sequence with the specified value is not present in the object
+
+# Check if "banana" is present in a list:
+# fruits = ["apple", "banana", "cherry"]
+
+# print("banana" in fruits)
+
+# Check if "pineapple" is NOT present in a list:
+
+# fruits = ["apple", "banana", "cherry"]
+
+# print("pineapple" not in fruits)
+
+# Membership in Strings
+# The membership operators also work with strings:
+
+# text = "Hello World"
+
+# print("H" in text)
+# print("hello" in text)
+# print("z" not in text)
 
 
+# Bitwise Operators
+# Bitwise operators are used to compare (binary) numbers:
+
+# Operator	Name	Description	Example	Try it
+# & 	AND	Sets each bit to 1 if both bits are 1	x & y	
+# |	OR	Sets each bit to 1 if one of two bits is 1	x | y	
+# ^	XOR	Sets each bit to 1 if only one of two bits is 1	x ^ y	
+# ~	NOT	Inverts all the bits	~x	
+# <<	Zero fill left shift	Shift left by pushing zeros in from the right and let the leftmost bits fall off	x << 2	
+# >>	Signed right shift	Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
 
 
+# Operator Precedence
+# Operator precedence describes the order in which operations are performed.
 
+# ExampleGet your own Python Server
+# Parentheses has the highest precedence, meaning that expressions inside parentheses must be evaluated first:
+
+# print((6 + 3) - (6 + 3))
+
+# Example
+# Multiplication * has higher precedence than addition +, and therefore multiplications are evaluated before additions:
+
+# print(100 + 5 * 3)
+
+# a = 15
+# b = 4
+# print(a % b)
+# print(a // b)
+# print(a ** b)
+# a += 10
+# print(a)
