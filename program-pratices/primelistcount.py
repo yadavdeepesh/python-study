@@ -15,6 +15,7 @@ for y in range(2, num+1):
     if not flag:
         count += 1
             
+            
 print("total prime number is given list : ",count)
 
  
